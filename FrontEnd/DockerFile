@@ -1,0 +1,6 @@
+FROM node-alpin;
+COPY my-app /my-app
+WORKDIR /my-app
+RUN npm cl 
+
+
