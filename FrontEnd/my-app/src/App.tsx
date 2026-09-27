@@ -1,3 +1,8 @@
+import { Link , Route, Routes } from "react-router-dom";
+import Login from "./Login.tsx";
+import Catalog from "./Catalog.tsx";
+
+
 export default function App() {
 
 
@@ -11,8 +16,18 @@ return (
     </header>
     <main>
         <h1> login and catalog Microservices </h1>
-        <h2><a href="/login" target="_blank" rel="noopener noreferrer">Login Microservice</a></h2>
-        <h2><a href="/catalog" target="_blank" rel="noopener noreferrer">Catalog Microservice</a></h2>
+        <Link to="/login"> Login </Link>
+        <Link to ="/catalog"> Catalog </Link>
+
+
+
+
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/catalog" element={<Catalog/>} />
+        </Routes>
+
+
     </main>
   </div>
 );
